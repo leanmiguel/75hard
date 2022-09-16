@@ -1,0 +1,63 @@
+{{template "base" .}}
+
+{{define "main"}}
+
+<section class="hero block-wrap">
+  <header>
+    <div class="subhead">
+      <h1><div>Community</div></h1>
+    </div>
+  </header>
+
+  <div class="community-spacer">
+    <h3 class="community-date">{{.CommunityDate}}</h3>
+
+    <div class="community-grid">
+      {{ range.CommunityChallenges }}
+      <div class="individual-container">
+        <span class="individual">{{.Username}}</span>
+        <div class="item-markers">
+          <span class="item-marker {{if .First}} completed {{ end }}">1</span>
+          <span class="item-marker {{if .Second}} completed {{ end }}">2</span>
+          <span class="item-marker {{if .Third}} completed {{ end }}">3</span>
+          <span class="item-marker {{if .Fourth}} completed {{ end }}">4</span>
+          <span class="item-marker {{if .Fifth}} completed {{ end }}">5</span>
+        </div>
+      </div>
+
+      {{ end }}
+      <!-- <div class="individual-container">
+        <span class="individual">Lean</span>
+        <div class="item-markers">
+          <span class="item-marker">1</span>
+          <span class="item-marker">2</span>
+          <span class="item-marker">3</span>
+          <span class="item-marker">4</span>
+          <span class="item-marker">5</span>
+        </div>
+      </div>
+      <div class="individual-container">
+        <span class="individual">Lean</span>
+        <div class="item-markers">
+          <span class="item-marker">1</span>
+          <span class="item-marker">2</span>
+          <span class="item-marker">3</span>
+          <span class="item-marker">4</span>
+          <span class="item-marker">5</span>
+        </div>
+      </div>
+      <div class="individual-container">
+        <span class="individual">Lean</span>
+        <div class="item-markers">
+          <span class="item-marker">1</span>
+          <span class="item-marker">2</span>
+          <span class="item-marker">3</span>
+          <span class="item-marker">4</span>
+          <span class="item-marker">5</span>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+{{ end }}

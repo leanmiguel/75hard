@@ -1,0 +1,63 @@
+{{template "base" .}}
+
+{{define "main"}}
+
+<section class="hero block-wrap">
+  <header>
+    <div class="subhead">
+      <h1><div>History</div></h1>
+    </div>
+  </header>
+
+  <div class="history-container">
+    <div class="date-container">
+      {{ range.HistoryWeekChallenges }}
+      <div class="date-item">
+        <div>
+          <sup>{{.Month}}</sup
+          >⁄<sub>{{.Day}}</sub>
+        </div>
+        <div class="history-markers">
+          <span class="item-marker{{if .First}} completed {{ end }}">1</span>
+          <span class="item-marker{{if .Second}} completed {{ end }}">2</span>
+          <span class="item-marker{{if .Third}} completed {{ end }}">3</span>
+          <span class="item-marker{{if .Fourth}} completed {{ end }}">4</span>
+          <span class="item-marker{{if .Fifth}} completed {{ end }}">5</span>
+        </div>
+      </div>
+      {{ end }}
+      <!-- <div class="date-item">        
+        <div><sup>9</sup>⁄<sub>23</sub></div>
+        <div class="history-markers">
+          <span class="item-marker completed">1</span>
+          <span class="item-marker completed">2</span>
+          <span class="item-marker completed">3</span>
+          <span class="item-marker completed">4</span>
+          <span class="item-marker">5</span>
+        </div>
+      </div>
+      <div class="date-item">
+        <div><sup>9</sup>⁄<sub>24</sub></div>
+        <div class="history-markers">
+          <span class="item-marker">1</span>
+          <span class="item-marker completed">2</span>
+          <span class="item-marker">3</span>
+          <span class="item-marker completed">4</span>
+          <span class="item-marker completed">5</span>
+        </div>
+      </div>
+      <div class="date-item">
+        <div><sup>9</sup>⁄<sub>25</sub></div>
+        <div class="history-markers">
+          <span class="item-marker completed">1</span>
+          <span class="item-marker completed">2</span>
+          <span class="item-marker completed">3</span>
+          <span class="item-marker completed">4</span>
+          <span class="item-marker completed">5</span>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+{{ end }}

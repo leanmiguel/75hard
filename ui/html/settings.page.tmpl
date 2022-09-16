@@ -1,0 +1,18 @@
+{{template "base" .}}
+
+{{define "main"}}
+<section class="hero block-wrap">
+  <header>
+    <div class="subhead">
+      <h1><div>Settings</div></h1>
+    </div>
+  </header>
+  <div class="logout-container">
+    <p class="setting">Set Challenges</p>
+    <p class="setting">Set Visibility</p>
+    <form action="/logout" method="POST">
+      <button class="setting">Logout</button>
+    </form>
+  </div>
+</section>
+{{ end }}

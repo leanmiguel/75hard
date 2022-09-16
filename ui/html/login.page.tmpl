@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>75 Hard Challenge</title>
+    <link rel="stylesheet" href="https://unpkg.com/open-props" />
+    <link rel="stylesheet" href="/static/css/main.css" />
+  </head>
+  <body>
+    <div class="auth_container">
+      <form action="/login" method="post" class="auth_container">
+        <div class="auth_centerer">
+          {{with .Flash}}
+          <div class="flash">{{.}}</div>
+          {{end}}
+          {{with .Form}}
+          {{with .Errors.Get "generic"}}
+          <div class="login_error">{{.}}</div>
+          {{end}}
+          <div class="input_container">
+            <label class="auth_label" for="username">username</label>
+            <input
+              {{with .Errors.Get "username"}}
+              class="auth_input auth_error"
+              {{else}}            
+              class="auth_input"
+              {{end}}
+              placeholder=" "
+              type="text"
+              name="username"
+            />
+            {{with .Errors.Get "username"}}
+            <p class="input_error">{{.}}</p>
+            {{end}}
+          </div>
+          <div class="input_container">
+            <label class="auth_label" for="password">password</label>
+            <input
+              {{with .Errors.Get "password"}}
+              class="auth_input auth_error"
+              {{else}}            
+              class="auth_input"
+              {{end}}
+              placeholder=" "
+              type="password"
+              name="password"
+            />
+            {{with .Errors.Get "password"}}
+            <p class="input_error">{{.}}</p>
+            {{end}}
+          {{end}}
+          </div>
+
+          <div class="auth_button_container">
+            <button type="submit" class="auth_button">Login</button>
+          </div>
+        </form>
+        <div class="auth_button_container">
+          <a href="/signup">
+            <div class="auth_button">Sign Up</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="/static/js/main.js" type="text/javascript"></script>
+  </body>
+</html>

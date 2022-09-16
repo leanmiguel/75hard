@@ -1,0 +1,51 @@
+{{template "base" .}}
+
+{{define "main"}}
+
+<section class="hero block-wrap">
+  <header>
+    <div class="subhead">
+      <h1><div>Today's Challenge</div></h1>
+    </div>
+  </header>
+
+  <ol class="exercise-list">
+    <li
+      data-challenge-id="1"
+      class="exerciseItem {{if .Challenges.First}} clicked {{ end }}"
+    >
+      {{.Settings.FirstChallenge}}
+    </li>
+    <li
+      data-challenge-id="2"
+      class="exerciseItem {{if .Challenges.Second}} clicked {{ end }}"
+    >
+      {{.Settings.SecondChallenge}}
+    </li>
+    <li
+      data-challenge-id="3"
+      class="exerciseItem {{if .Challenges.Third}} clicked {{ end }}"
+    >
+      {{.Settings.ThirdChallenge}}
+    </li>
+    <li
+      data-challenge-id="4"
+      class="exerciseItem {{if .Challenges.Fourth}} clicked {{ end }}"
+    >
+      {{.Settings.FourthChallenge}}
+    </li>
+    <li
+      data-challenge-id="5"
+      class="exerciseItem {{if .Challenges.Fifth}} clicked {{ end }}"
+    >
+      {{.Settings.FifthChallenge}}
+    </li>
+    <!-- <li data-challenge-id="1"  class="exerciseItem">item 1!</li>
+    <li data-challenge-id="2" class="exerciseItem">item 2!</li>
+    <li data-challenge-id="3" class="exerciseItem">item 3!</li>
+    <li data-challenge-id="4" class="exerciseItem">item 4!</li>
+    <li data-challenge-id="5" class="exerciseItem">item 5!</li> -->
+  </ol>
+</section>
+
+{{ end }}
